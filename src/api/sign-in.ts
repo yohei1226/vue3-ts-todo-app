@@ -1,12 +1,11 @@
 import axios from "axios";
 
 interface UserData {
-  name: string;
   email: string;
   password: string;
 }
 
-export const userDataCreate = async (params: UserData) => {
+export const SignIn = async (params: UserData) => {
   const url = "http://localhost:3000/api/v1/auth/sign_in";
   await axios
     .post(url, params)
